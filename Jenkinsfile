@@ -4,6 +4,7 @@ pipeline {
     environment {
         IMAGE = "tominsahu/k8s-dashboard"
         TAG = "latest"
+        KUBECONFIG = "C:\\Users\\Dell\\.kube\\config"
     }
 
     stages {
@@ -11,7 +12,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/<your-username>/k8s-monitoring-dashboard.git'
+                url: 'https://github.com/Tomin-sahu/k8s-monitoring-dashboard.git'
             }
         }
 
