@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>K8s Monitoring Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h1>🚀 Kubernetes Monitoring Dashboard</h1>
+
+    <div class="grid">
+      <div class="card">
+        <h2>🔥 CPU Usage</h2>
+        <p>{{ data.cpu }}%</p>
+      </div>
+
+      <div class="card">
+        <h2>🧠 Memory Usage</h2>
+        <p>{{ data.memory }}%</p>
+      </div>
+
+      <div class="card">
+        <h2>📦 Pods</h2>
+        <pre>{{ data.pods }}</pre>
+      </div>
+
+      <div class="card">
+        <h2>🖥 Nodes</h2>
+        <pre>{{ data.nodes }}</pre>
+      </div>
+    </div>
+  </body>
+</html>
