@@ -21,11 +21,11 @@ def get_nodes():
 @app.route("/")
 def home():
     data = {
-        "cpu": random.randint(10, 90),
-        "memory": random.randint(20, 80),
-        "pods": get_pods(),
-        "nodes": get_nodes()
-    }
+    "cpu": f"{random.randint(10, 90)}%",
+    "memory": f"{random.randint(20, 80)}%",
+    "pods": get_pods().splitlines(),
+    "nodes": get_nodes().splitlines()
+}
     return render_template("index.html", data=data)
 
 if __name__ == "__main__":
